@@ -1,5 +1,8 @@
 const mongoose = require('mongoose')
 
+//added this to remove the DeprecationWarning
+mongoose.set("strictQuery", true);
+
 const userSchema = new mongoose.Schema({
     name : {
         type : String,

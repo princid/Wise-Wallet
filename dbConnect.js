@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
+//added this to remove the DeprecationWarning
+mongoose.set("strictQuery", true);
+
+// mongoose.set("strictQuery", false);
+
 dotenv.config();
 
 mongoose.connect(

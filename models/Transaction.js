@@ -1,5 +1,8 @@
 const mongoose = require("mongoose");
 
+//added this to remove the DeprecationWarning
+mongoose.set("strictQuery", true);
+
 const transactionSchema = new mongoose.Schema({
   userid : { type: String, required: true},
   amount: { type: Number, required: true },
